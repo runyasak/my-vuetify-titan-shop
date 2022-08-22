@@ -2,7 +2,7 @@
 import { useFetch } from "@vueuse/core";
 import { Product } from "./models/product.model";
 
-const { data: products } = useFetch(
+const { isFetching, data: products } = useFetch(
   "https://fakestoreapi.com/products?limit=20"
 )
   .get()
@@ -33,5 +33,13 @@ const { data: products } = useFetch(
         </v-row>
       </v-container>
     </v-main>
+
+    <v-overlay v-model="isFetching" class="align-center justify-center">
+      <v-progress-circular
+        :size="50"
+        color="secondary"
+        indeterminate
+      ></v-progress-circular>
+    </v-overlay>
   </v-app>
 </template>
