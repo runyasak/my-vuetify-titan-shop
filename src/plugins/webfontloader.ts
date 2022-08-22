@@ -5,11 +5,13 @@
  */
 
 export async function loadFonts() {
-  const webFontLoader = await import(/* webpackChunkName: "webfontloader" */'webfontloader')
+  const webFontLoader = await import(
+    /* webpackChunkName: "webfontloader" */ "webfontloader"
+  );
 
   webFontLoader.load({
     google: {
-      families: ['Raleway:400,700&display=swap'],
+      families: ["Raleway:400,700&display=swap"],
     },
-  })
+  });
 }
