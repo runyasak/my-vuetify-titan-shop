@@ -1,3 +1,8 @@
+.v-application,
+.v-application [class*="text-"] {
+  font-family: "Raleway", sans-serif !important;
+}
+
 .v-container {
   max-width: 1024px;
 }
