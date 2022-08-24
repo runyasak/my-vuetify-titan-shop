@@ -18,12 +18,17 @@ const { isFetching, data: product } = useFetch(
 
 <template>
   <v-container>
+    <v-btn variant="text" @click="$router.back()">
+      <v-icon start icon="mdi-arrow-left"> </v-icon>
+      Back
+    </v-btn>
     <div class="wrapper">
       <div v-if="product" class="d-flex gap-12">
         <v-img :src="product.image" width="400"></v-img>
         <div class="product-description">
           <span class="text-h4">{{ product.title }}</span>
           <span>{{ product.description }}</span>
+          <span class="text-h4 text-secondary">${{ product.price }}</span>
 
           <div class="buttons-group">
             <v-btn variant="text">buy now</v-btn>
@@ -41,7 +46,7 @@ const { isFetching, data: product } = useFetch(
   display: flex;
   align-items: center;
   min-height: 660px;
-  height: calc(100vh - 6.5em);
+  height: calc(100vh - 8.5em);
 }
 
 .product-description {
