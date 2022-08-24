@@ -30,7 +30,9 @@ const { isFetching, data: products } = useFetch(
 
           <v-card-title> {{ product.title }} </v-card-title>
 
-          <v-card-text> {{ product.price }} </v-card-text>
+          <v-card-text class="text-body-1 text-secondary font-weight-bold">
+            ${{ product.price }}
+          </v-card-text>
         </v-card>
       </v-col>
     </v-row>

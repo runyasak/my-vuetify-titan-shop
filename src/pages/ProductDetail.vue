@@ -28,7 +28,9 @@ const { isFetching, data: product } = useFetch(
         <div class="product-description">
           <span class="text-h4">{{ product.title }}</span>
           <span>{{ product.description }}</span>
-          <span class="text-h4 text-secondary">${{ product.price }}</span>
+          <span class="text-h4 text-secondary font-weight-bold">
+            ${{ product.price }}
+          </span>
 
           <div class="buttons-group">
             <v-btn variant="text">buy now</v-btn>
