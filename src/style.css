@@ -7,10 +7,6 @@
   font-family: "Raleway", sans-serif !important;
 }
 
-.v-container {
-  max-width: 1024px;
-}
-
 .v-card.v-theme--light.v-card--density-default.v-card--variant-elevated {
   box-shadow: 0 3px 12px 0 rgb(104 113 134 / 20%);
 }

@@ -10,7 +10,7 @@ const { isFetching, data: products } = useFetch(
 </script>
 
 <template>
-  <v-container>
+  <v-container class="home-container">
     <v-row class="py-4">
       <v-col v-for="product of products" :key="product.id" col="12" md="4">
         <v-card
@@ -50,5 +50,9 @@ const { isFetching, data: products } = useFetch(
 
 .product-card:hover .product-img {
   transform: scale(1.1);
+}
+
+.home-container {
+  max-width: 1024px;
 }
 </style>
