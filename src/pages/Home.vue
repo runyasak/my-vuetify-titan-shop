@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useFetch } from "@vueuse/core";
 import { Product } from "../models/product.model";
+import BaseLoading from "../components/BaseLoading.vue";
 
 const { isFetching, data: products } = useFetch(
   "https://fakestoreapi.com/products?limit=20"
@@ -34,13 +35,7 @@ const { isFetching, data: products } = useFetch(
       </v-col>
     </v-row>
   </v-container>
-  <v-overlay v-model="isFetching" class="align-center justify-center">
-    <v-progress-circular
-      :size="50"
-      color="secondary"
-      indeterminate
-    ></v-progress-circular>
-  </v-overlay>
+  <base-loading :loading="isFetching"></base-loading>
 </template>
 
 <style scoped>

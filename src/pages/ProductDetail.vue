@@ -3,6 +3,7 @@ import { useFetch } from "@vueuse/core";
 import { Product } from "../models/product.model";
 
 import { useRoute } from "vue-router";
+import BaseLoading from "../components/BaseLoading.vue";
 
 const {
   params: { productId },
@@ -32,13 +33,7 @@ const { isFetching, data: product } = useFetch(
       </div>
     </div>
   </v-container>
-  <v-overlay v-model="isFetching" class="align-center justify-center">
-    <v-progress-circular
-      :size="50"
-      color="secondary"
-      indeterminate
-    ></v-progress-circular>
-  </v-overlay>
+  <base-loading :loading="isFetching"></base-loading>
 </template>
 
 <style scoped>
