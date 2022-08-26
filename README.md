@@ -1,7 +1,13 @@
-# Vue 3 + Vite
+# My Vuetify Titan Shop - Demo Vuetify 3 (Beta) Project
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This is my demo project using Vue 3, Vite, and Vuetify 3.
 
-## Recommended IDE Setup
+## Screenshots
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+![home-page](https://github.com/runyasak/my-vuetify-titan-shop/docs/home-page.png)
+
+![product-detail-page](https://github.com/runyasak/my-vuetify-titan-shop/docs/product-detail-page.png)
+
+## Resources
+
+- [Vuetify 3](https://next.vuetifyjs.com/en/)
