@@ -4,9 +4,9 @@ This is my demo project using Vue 3, Vite, and Vuetify 3.
 
 ## Screenshots
 
-![home-page](https://github.com/runyasak/my-vuetify-titan-shop/docs/home-page.png)
+![home-page](https://github.com/runyasak/my-vuetify-titan-shop/blob/main/docs/home-page.png)
 
-![product-detail-page](https://github.com/runyasak/my-vuetify-titan-shop/docs/product-detail-page.png)
+![product-detail-page](https://github.com/runyasak/my-vuetify-titan-shop/blob/main/docs/product-detail-page.png)
 
 ## Resources
 
