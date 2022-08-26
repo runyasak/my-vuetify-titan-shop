@@ -2,18 +2,33 @@
 import { useFetch } from "@vueuse/core";
 import { Product } from "../models/product.model";
 import BaseLoading from "../components/BaseLoading.vue";
+import { computed, ref } from "@vue/reactivity";
 
 const { isFetching, data: products } = useFetch(
   "https://fakestoreapi.com/products?limit=20"
 )
   .get()
   .json<Product[]>();
+
+const query = ref("");
+
+const searchProducts = computed(() =>
+  products.value?.filter((product) =>
+    product.title.toLowerCase().includes(query.value.toLowerCase())
+  )
+);
 </script>
 
 <template>
   <v-container class="home-container">
+    <v-text-field v-model="query"></v-text-field>
     <v-row class="py-4">
-      <v-col v-for="product of products" :key="product.id" col="12" md="4">
+      <v-col
+        v-for="product of searchProducts"
+        :key="product.id"
+        col="12"
+        md="4"
+      >
         <v-card
           class="mx-auto product-card"
           variant="elevated"
